@@ -10,9 +10,9 @@ function getGreetingIn5Seconds() {
         const timeoutEvent = () => {
             const randomBoolean = getRandomBoolean();
 
-            if (!randomBoolean) reject('what?');
+            if (randomBoolean) resolve('hello');
 
-            resolve('hello');
+            reject('what?');
         };
 
         setTimeout(timeoutEvent, 5000);
