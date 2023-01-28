@@ -8,9 +8,9 @@ function getRandomBoolean() {
 function getGreetingIn5Seconds() {
     const greetingPromise = new Promise((resolve, reject) => {
         const timeoutEvent = () => {
-            const randomBoolean = getRandomBoolean();
+            const isTrue = getRandomBoolean();
 
-            if (randomBoolean) resolve('hello');
+            if (isTrue) resolve('hello');
 
             reject('what?');
         };
