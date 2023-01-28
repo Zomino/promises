@@ -7,15 +7,13 @@ function getRandomBoolean() {
 
 function getGreetingIn5Seconds() {
     const greetingPromise = new Promise((resolve, reject) => {
-        const timeoutEvent = () => {
+        setTimeout(() => {
             const isTrue = getRandomBoolean();
 
             if (isTrue) resolve('hello');
 
             reject('what?');
-        };
-
-        setTimeout(timeoutEvent, 5000);
+        }, 5000);
     });
 
     return greetingPromise;
