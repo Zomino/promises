@@ -11,7 +11,7 @@ function blockFor5Seconds() {
 
 console.log('start');
 
-blockFor5Seconds(5000);
+blockFor5Seconds();
 
 console.log('hello');
 
